@@ -1,4 +1,4 @@
-class Vehicle {
+abstract class Vehicle {
     protected String modelName;
     private String brand;
     private int year;
@@ -14,7 +14,7 @@ class Vehicle {
     }
     
     public String getBrand() {
-    return brand;
+        return brand;
     }
     
     public int getYear() {
