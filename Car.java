@@ -1,5 +1,6 @@
 class Car extends Vehicle implements Serviceable {
     private int numberOfDoors;
+    
     public Car(String modelName, String brand, int year, int numberOfDoors) {
         super(modelName, brand, year);
         this.numberOfDoors = numberOfDoors;
@@ -18,6 +19,7 @@ class Car extends Vehicle implements Serviceable {
 
     @Override
     public boolean checkEngineStatus(){
+        System.out.println("Engine Check Status: true");
         return true; 
     }
 }

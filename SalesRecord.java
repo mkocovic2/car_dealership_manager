@@ -1,42 +1,36 @@
-public class SalesRecord {
-    private String soldVehicle;
-    private String customerName;
-    private double salePrice; 
-    private String saleDate;
+import java.time.LocalDate;
 
-    // Getter and Setter for soldVehicle
-    public String getSoldVehicle() {
+public class SalesRecord {
+    private Vehicle soldVehicle;
+    private String customerName;
+    private double salePrice;
+    private LocalDate saleDate;
+    
+    public SalesRecord(Vehicle soldVehicle, String customerName, double salePrice) {
+        this.soldVehicle = soldVehicle;
+        this.customerName = customerName;
+        this.salePrice = salePrice;
+        this.saleDate = LocalDate.now();
+    }
+    
+    public Vehicle getSoldVehicle() {
         return soldVehicle;
     }
-
-    public void setSoldVehicle(String soldVehicle) {
-        this.soldVehicle = soldVehicle;
-    }
-
-    // Getter and Setter for customerName
+    
     public String getCustomerName() {
         return customerName;
     }
-
-    public void setCustomerName(String customerName) {
-        this.customerName = customerName;
-    }
-
-    // Getter and Setter for salePrice
+    
     public double getSalePrice() {
         return salePrice;
     }
-
-    public void setSalePrice(double salePrice) {
-        this.salePrice = salePrice;
-    }
-
-    // Getter and Setter for saleDate
-    public String getSaleDate() {
+    
+    public LocalDate getSaleDate() {
         return saleDate;
     }
-
-    public void setSaleDate(String saleDate) {
-        this.saleDate = saleDate;
+    
+    public void displaySaleDetails() {
+        soldVehicle.displayDetails();
+        System.out.println("to " + customerName + " for $" + salePrice + " on " + saleDate);
     }
 }

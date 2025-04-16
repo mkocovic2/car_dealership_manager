@@ -1,14 +1,18 @@
-class Motorcycle extends Vehicle {
-    private boolean hasSideCar;
+public class Motorcycle extends Vehicle {
+    private boolean hasSidecar;
     
-    public Motorcycle(String modelName, String brand, int year, boolean hasSideCar) {
-        super(modelName, brand, year);
-        this.hasSideCar = hasSideCar;
+    public Motorcycle(String model, String brand, int year, boolean hasSidecar) {
+        super(model, brand, year);
+        this.hasSidecar = hasSidecar;
+    }
+    
+    public boolean hasSidecar() {
+        return hasSidecar;
     }
     
     @Override
     public void displayDetails() {
         super.displayDetails();
-        System.out.println("Has sidecar: " + hasSideCar);
+        System.out.println("Has sidecar: " + hasSidecar);
     }
 }

@@ -16,7 +16,7 @@ class Truck extends Vehicle implements Serviceable {
 
     @Override
     public void performStandardService() {
-        System.out.println("Performing standard service on Car " + getModelName());
+        System.out.println("Performing standard service on Truck " + getModelName());
     }
     
     @Override
