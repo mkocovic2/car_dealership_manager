@@ -15,12 +15,13 @@ class Truck extends Vehicle implements Serviceable {
     }
 
     @Override
-    public void performStandardService(){
-
+    public void performStandardService() {
+        System.out.println("Performing standard service on Car " + getModelName());
     }
-
+    
     @Override
-    public boolean checkEngineStatus(){
-        return true; 
+    public boolean checkEngineStatus() {
+        System.out.println("Engine Check Status: true");
+        return true;
     }
 }
